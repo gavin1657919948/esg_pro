@@ -1,0 +1,70 @@
+{
+  "name": "RoadVehicle_HK",
+  "plural": "RoadVehicle_HKs",
+  "base": "PersistedModel",
+  "componentPackage": "@wushuu/module-api-kpi/common/models/a1_1reckon/hk/roadVehicle_HK/",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "SystemDomain": {
+      "foreignKey": "systemDomainId",
+      "required": false
+    },
+    "SystemUser": {
+      "foreignKey": "systemUserId",
+      "required": true
+    },
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "String",
+      "required": true
+    },
+    "serialNumber": {
+      "type": "string",
+      "required": true
+    },
+    "licensePlateNumber": {
+      "type": "string",
+      "required": true
+    },
+    "vehicleTypeId": {
+      "type": "number",
+      "required": true
+    },
+    "fuelTypeId": {
+      "type": "number",
+      "required": true
+    },
+    "subgroupId": {
+      "type": "number",
+      "required": true
+    },
+    "emissionStandardId": {
+      "type": "number",
+      "required": true
+    },
+    "efValue": {
+      "type": "json"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "roadVehicleFuel_HKs": {
+      "type": "hasMany",
+      "model": "RoadVehicleFuel_HK",
+      "foreignKey": "roadVehicle_HKId"
+    }
+  },
+  "scope": {
+    "include": "roadVehicleFuel_HKs"
+  },
+  "acls": []
+}

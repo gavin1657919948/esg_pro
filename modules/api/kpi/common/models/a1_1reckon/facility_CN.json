@@ -1,0 +1,74 @@
+{
+  "name": "Facility_CN",
+  "plural": "Facilitiy_CNs",
+  "base": "PersistedModel",
+  "forceId": false,
+  "idInjection": true,
+  "componentPackage": "@wushuu/module-api-kpi/common/models/a1_1reckon/cn/facility_CN/",
+  "mixins": {
+    "SystemDomain": {
+      "foreignKey": "systemDomainId",
+      "required": false
+    },
+    "SystemUser": {
+      "foreignKey": "systemUserId",
+      "required": true
+    },
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "String",
+      "required": true
+    },
+    "serialNumber": {
+      "type": "string",
+      "required": true
+    },
+    "fuelTypeId": {
+      "type": "number",
+      "required": true
+    },
+    "fuelDefineId": {
+      "type": "number",
+      "required": true
+    },
+    "facilityTypeId": {
+      "type": "number",
+      "required": true
+    },
+    "power": {
+      "type": "number",
+      "required": true
+    },
+    "powerUnit": {
+      "type": "string",
+      "required": true
+    },
+    "efValue1_1": {
+      "type": "json"
+    },
+    "efValue1_2": {
+      "type": "json"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "facilityFuel_CNs": {
+      "type": "hasMany",
+      "model": "FacilityFuel_CN",
+      "foreignKey": "facility_CNId"
+    }
+  },
+  "scope": {
+    "include": "facilityFuel_CNs"
+  },
+  "acls": [],
+  "methods": []
+}

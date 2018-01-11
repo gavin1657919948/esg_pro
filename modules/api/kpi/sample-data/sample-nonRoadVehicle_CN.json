@@ -1,0 +1,29 @@
+{
+  "NonRoadVehicle_CN": [
+    {
+      "id": "first_NonRoadVehicle_CN",
+      "serialNumber": "first_NonRoadVehicle_CN",
+      "licensePlateNumber": "鄂Axxxxxxx",
+      "nrVehicleTypeId": 1,
+      "nrFuelTypeId": 1,
+      "nrEmissionStandardId": 1,
+      "systemDomainId": "default",
+      "systemUserId": "admin",
+      "efValue1_1": {
+        "pm": 0.18,
+        "pm2_5": 0.17,
+        "thc": 2.85,
+        "nox": 1.1,
+        "co": 0.96,
+        "sulphurContent": 10
+      },
+      "efValue1_2": {
+        "co2_EmissionFactor": 0.000703364,
+        "ch4_EmissionFactor": 0.380407756,
+        "ch4_GWP": 28,
+        "n2o_EmissionFactor": 0.068684734,
+        "n2o_GWP": 265
+      }
+    }
+  ]
+}

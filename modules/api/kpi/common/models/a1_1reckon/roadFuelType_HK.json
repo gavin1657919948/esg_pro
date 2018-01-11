@@ -1,0 +1,39 @@
+{
+  "name": "RoadFuelType_HK",
+  "plural": "RoadFuelType_HK",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "roadSubgroup_HKs": {
+      "type": "hasMany",
+      "model": "RoadSubgroup_HK",
+      "foreignKey": "roadFuelType_HKId"
+    }
+  },
+  "scope": {
+    "include": "roadSubgroup_HKs"
+  },
+  "acls": [],
+  "methods": []
+}

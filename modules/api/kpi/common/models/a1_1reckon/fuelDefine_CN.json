@@ -1,0 +1,39 @@
+{
+  "name": "FuelDefine_CN",
+  "plural": "FuelDefine_CNs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "facilityType_CNs": {
+      "type": "hasMany",
+      "model": "FacilityType_CN",
+      "foreignKey": "fuelDefine_CNId"
+    }
+  },
+  "scope": {
+    "include": "facilityType_CNs"
+  },
+  "acls": [],
+  "methods": []
+}

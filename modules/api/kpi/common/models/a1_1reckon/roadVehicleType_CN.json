@@ -1,0 +1,44 @@
+{
+  "name": "RoadVehicleType_CN",
+  "plural": "RoadVehicleType_CNs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "roadFuelType_CNs": {
+      "type": "hasMany",
+      "model": "RoadFuelType_CN",
+      "foreignKey": "roadVehicleType_CNId"
+    },
+    "roadEmissionStandard_CNs": {
+      "type": "hasMany",
+      "model": "RoadEmissionStandard_CN",
+      "foreignKey": "roadVehicleType_CNId"
+    }
+  },
+  "scope": {
+    "include": ["roadFuelType_CNs", "roadEmissionStandard_CNs"]
+  },
+  "acls": [],
+  "methods": []
+}

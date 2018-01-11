@@ -1,0 +1,22 @@
+{
+  "name": "@wushuu/module-api-organization",
+  "version": "0.1.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": "",
+  "url": "https://github.com/colmena/colmena",
+  "colmena": {
+    "module": {
+      "modelSources": ["common/models"],
+      "models": {
+        "Organization": {
+          "dataSource": "db",
+          "public": true
+        }
+      },
+      "sampleData": ["sample-data/sample-data.json"]
+    }
+  }
+}

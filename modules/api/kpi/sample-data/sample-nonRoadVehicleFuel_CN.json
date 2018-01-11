@@ -1,0 +1,16 @@
+{
+  "NonRoadVehicleFuel_CN": [
+    {
+      "id": "first_NonRoadVehicleFuel_CN",
+      "timeStartValue": "2017-12-28T04:02:02.924Z",
+      "timeEndValue": "2017-12-28T04:02:02.924Z",
+      "timeUnit": "string",
+      "year": 2017,
+      "tripDistance": 10,
+      "fuelConsumption": 10,
+      "nonRoadVehicle_CNId": "first_NonRoadVehicle_CN",
+      "emissionId": "nrEmission",
+      "gasEmissionId": "nrGasEmission"
+    }
+  ]
+}

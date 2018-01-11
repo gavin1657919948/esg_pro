@@ -1,0 +1,31 @@
+{
+  "name": "GasEmission",
+  "plural": "GasEmissions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "co2": {
+      "type": "string"
+    },
+    "ch4": {
+      "type": "string"
+    },
+    "n2o": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

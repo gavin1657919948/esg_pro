@@ -1,0 +1,103 @@
+{
+  "Organization": [
+    {
+      "parentId": "0",
+      "type": "0",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "admin"
+    },
+    {
+      "parentId": "1",
+      "type": "1",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "manager"
+    },
+    {
+      "parentId": "1",
+      "type": "1",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "manager"
+    },
+    {
+      "parentId": "2",
+      "type": "2",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "user"
+    },
+    {
+      "parentId": "2",
+      "type": "2",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "user"
+    },
+    {
+      "parentId": "3",
+      "type": "2",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "user"
+    },
+    {
+      "parentId": "3",
+      "type": "2",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "user"
+    },
+    {
+      "parentId": "3",
+      "type": "2",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "user"
+    },
+    {
+      "parentId": "2",
+      "type": "2",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "user"
+    },
+    {
+      "parentId": "4",
+      "type": "2",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "user"
+    },
+    {
+      "parentId": "5",
+      "type": "2",
+      "description": "6666",
+      "city": "香港",
+      "street": "11",
+      "zipCode": "1234",
+      "systemUserId": "user"
+    }
+  ]
+}

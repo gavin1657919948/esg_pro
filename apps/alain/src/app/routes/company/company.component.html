@@ -1,0 +1,28 @@
+<div nz-row  class="logo">
+    <div nz-col [nzSpan]="4">
+        <img src="../../../../../assets/img/1.png">
+    </div>
+    <div nz-col [nzSpan]="8" *ngFor="let item of company">
+        <h1>{{item.name}}</h1>
+        <p> {{item.ename}} </p>
+    </div>
+</div>
+<div class="contact-info">
+    <div nz-row *ngFor="let item of basic ">
+        <p><span class="title">{{item.basic_info}}</span> <span class="line"></span></p>
+         <div nz-col [nzOffset]="3" class="basic">
+            <p>公司名称：{{item.company_name}}</p>
+            <p>公司行业：{{item.company_industry}}</p>
+            <p>服务范围：{{item.services}}</p>
+            <p>组织机构：{{item.organize}}</p>
+        </div>
+    </div>
+    <div nz-row *ngFor="let item of data">
+        <p><span class="title">{{item.contract}}</span> <span class="line"></span></p>
+        <div nz-col [nzOffset]="3" class="contact">
+            <p>姓名：{{item.name}}</p>
+            <p>电话：{{item.tel}}</p>
+            <p>邮箱：{{item.email}}</p>
+        </div>
+    </div>
+</div>

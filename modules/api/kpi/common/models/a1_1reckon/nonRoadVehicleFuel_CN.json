@@ -1,0 +1,65 @@
+{
+  "name": "NonRoadVehicleFuel_CN",
+  "plural": "NonRoadVehicleFuel_CNs",
+  "base": "PersistedModel",
+  "forceId": false,
+  "idInjection": true,
+  "componentPackage": "@wushuu/module-api-kpi/common/models/a1_1reckon/cn/nonRoadVehicleFuel_CN/",
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "timeStartValue": {
+      "type": "date",
+      "required": true
+    },
+    "timeEndValue": {
+      "type": "date",
+      "required": true
+    },
+    "timeUnit": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "number",
+      "required": true
+    },
+    "tripDistance": {
+      "type": "number",
+      "required": true
+    },
+    "fuelConsumption": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "emission": {
+      "type": "belongsTo",
+      "model": "Emission",
+      "foreignKey": "emissionId"
+    },
+    "gasEmission": {
+      "type": "belongsTo",
+      "model": "GasEmission",
+      "foreignKey": "gasEmissionId"
+    }
+  },
+  "scope": {
+    "include": ["emission", "gasEmission"]
+  },
+  "acls": [],
+  "methods": []
+}

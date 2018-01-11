@@ -1,0 +1,37 @@
+{
+  "company": [
+    {
+      "name": "中国联合通信网络集团",
+      "ename": "China United telecommunication corporation"
+    }
+  ],
+  "basic": [
+    {
+      "basic_info": "基本信息",
+      "company_name": "中国联合通信网络集团",
+      "company_industry": "通讯行业",
+      "services": "ESG / GRI / 新加坡交易所 / 国内A股",
+      "organize": "分公司1"
+    }
+  ],
+  "data": [
+    {
+      "contract": "主要联系人",
+      "name": "张某某",
+      "tel": "15512345678",
+      "email": "15512345678@hotmail.com"
+    },
+    {
+      "contract": "第二联系人",
+      "name": "王某",
+      "tel": "15512345678",
+      "email": "15512345678@hotmail.com"
+    },
+    {
+      "contract": "第三联系人",
+      "name": "邓某某",
+      "tel": "15512345678",
+      "email": "15512345678@hotmail.com"
+    }
+  ]
+}

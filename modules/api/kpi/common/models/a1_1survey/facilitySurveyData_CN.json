@@ -1,0 +1,54 @@
+{
+  "name": "FacilitySurveyData_CN",
+  "plural": "FacilitySurveyData_CNs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "String",
+      "required": true
+    },
+    "timeStartValue": {
+      "type": "date",
+      "required": true
+    },
+    "timeEndValue": {
+      "type": "date",
+      "required": true
+    },
+    "year": {
+      "type": "number",
+      "required": true
+    },
+    "concentrationPerHour": {
+      "type": "number",
+      "required": true
+    },
+    "gasFlowPerHour": {
+      "type": "number",
+      "required": false
+    },
+    "workingHour": {
+      "type": "number",
+      "required": false
+    },
+    "pollutantAmount": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

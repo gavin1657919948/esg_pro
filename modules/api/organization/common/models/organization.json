@@ -1,0 +1,58 @@
+{
+  "name": "Organization",
+  "plural": "Organizations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "public": true,
+  "mixins": {
+    "SystemDomain": {
+      "foreignKey": "systemDomainId",
+      "required": false
+    },
+    "SystemUser": {
+      "foreignKey": "systemUserId",
+      "required": true
+    }
+  },
+  "properties": {
+    "parentId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "String",
+      "required": true
+    },
+
+    "description": {
+      "type": "String"
+    },
+    "city": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "phoneNo": {
+      "type": "string"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY",
+      "property": "find"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY",
+      "property": "list"
+    }
+  ]
+}

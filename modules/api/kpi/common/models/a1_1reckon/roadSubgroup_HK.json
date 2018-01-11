@@ -1,0 +1,39 @@
+{
+  "name": "RoadSubgroup_HK",
+  "plural": "RoadSubgroup_HKs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "roadEmissionStandard_HKs": {
+      "type": "hasMany",
+      "model": "RoadEmissionStandard_HK",
+      "foreignKey": "roadSubgroup_HKId"
+    }
+  },
+  "scope": {
+    "include": "roadEmissionStandard_HKs"
+  },
+  "acls": [],
+  "methods": []
+}

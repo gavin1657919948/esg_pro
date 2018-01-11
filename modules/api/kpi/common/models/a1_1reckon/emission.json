@@ -1,0 +1,40 @@
+{
+  "name": "Emission",
+  "plural": "Emissions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "nox": {
+      "type": "string"
+    },
+    "sox": {
+      "type": "string"
+    },
+    "co": {
+      "type": "string"
+    },
+    "pm": {
+      "type": "string"
+    },
+    "pm2_5": {
+      "type": "string"
+    },
+    "pm10": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

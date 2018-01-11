@@ -1,0 +1,60 @@
+{
+  "name": "FacilitySurvey_CN",
+  "plural": "FacilitySurvey_CNs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "forceId": false,
+  "componentPackage": "@wushuu/module-api-kpi/common/models/a1_1survey/cn/facilitySurvey_CN",
+  "mixins": {
+    "SystemDomain": {
+      "foreignKey": "systemDomainId",
+      "required": false
+    },
+    "SystemUser": {
+      "foreignKey": "systemUserId",
+      "required": true
+    },
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "String",
+      "required": true
+    },
+    "serialNumber": {
+      "type": "string",
+      "required": true
+    },
+    "objUnit": {
+      "type": "string",
+      "required": true
+    },
+    "pollutantTypeId": {
+      "type": "number",
+      "required": false
+    },
+    "remark": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "facilitySurveyData_CNs": {
+      "type": "hasMany",
+      "model": "FacilitySurveyData_CN",
+      "foreignKey": "facilitySurvey_CNId"
+    }
+  },
+  "scope": {
+    "include": "facilitySurveyData_CNs"
+  },
+  "acls": [],
+  "methods": []
+}

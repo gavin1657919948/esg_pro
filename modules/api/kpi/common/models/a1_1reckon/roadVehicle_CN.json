@@ -1,0 +1,73 @@
+{
+  "name": "RoadVehicle_CN",
+  "plural": "RoadVehicle_CNs",
+  "base": "PersistedModel",
+  "componentPackage": "@wushuu/module-api-kpi/common/models/a1_1reckon/cn/roadVehicle_CN/",
+  "idInjection": true,
+  "forceId": false,
+  "mixins": {
+    "SystemDomain": {
+      "foreignKey": "systemDomainId",
+      "required": false
+    },
+    "SystemUser": {
+      "foreignKey": "systemUserId",
+      "required": true
+    },
+    "TimeStamp": {
+      "createdAt": "created",
+      "updatedAt": "modified",
+      "required": false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "String",
+      "required": true
+    },
+    "serialNumber": {
+      "type": "string",
+      "required": true
+    },
+    "licensePlateNumber": {
+      "type": "string",
+      "required": true
+    },
+    "vehicleTypeId": {
+      "type": "number",
+      "required": true
+    },
+    "fuelTypeId": {
+      "type": "number",
+      "required": true
+    },
+    "emissionStandardId": {
+      "type": "number",
+      "required": true
+    },
+    "vehicleWeight": {
+      "type": "number",
+      "required": true
+    },
+    "efValue1_1": {
+      "type": "json"
+    },
+    "efValue1_2": {
+      "type": "json"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "roadVehicleFuel_CNs": {
+      "type": "hasMany",
+      "model": "RoadVehicleFuel_CN",
+      "foreignKey": "roadVehicle_CNId"
+    }
+  },
+  "scope": {
+    "include": "roadVehicleFuel_CNs"
+  },
+  "acls": []
+}

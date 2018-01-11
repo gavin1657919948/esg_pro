@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "target": "es5",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@shared": ["apps/alain/src/app/shared"],
+      "@shared/*": ["apps/alain/src/app/shared/*"],
+      "@core": ["apps/alain/src/app/core/"],
+      "@core/*": ["apps/alain/src/app/core/*"],
+      "@alain/*": ["apps/alain/libs/*"],
+      "@colmena/*": ["libs/*"]
+    }
+  },
+  "exclude": ["node_modules", "tmp", "storage", "config", "dist"]
+}
